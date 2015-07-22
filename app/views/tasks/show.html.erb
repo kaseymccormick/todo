@@ -1,0 +1,19 @@
+<h1>Hello, </h1>
+
+<h3>Your tasks are</h3>
+
+<a href="<%= new_task_path %>">New Task</a>
+
+
+
+<% @task.all.each do |task| %>
+<div class="task">
+  <p><a href="<%= task_path(task.id) %>"><%= task.description %></a></p>
+  
+  <a href="<%= task_path(task.id) %>" data-method="delete">
+    Delete
+  </a>
+  
+
+</div>
+<% end %>

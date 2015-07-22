@@ -1,4 +1,25 @@
 Rails.application.routes.draw do
+    # Every route that you name... Rails makes a method
+    # which returns that route's path.
+    get "/tasks" => 'tasks#index', :as => "tasks"
+
+    delete "tasks/:id" => 'tasks#destroy'
+
+    # Where the edit-post form submits.
+    put "tasks/:id" => 'tasks#update'
+
+    # Shows the form to edit post number [:id].
+    get "tasks/:id/edit" => 'tasks#edit', :as => 'edit_task'
+
+    # Where the new-post form submits.
+    post "tasks" => 'tasks#create'
+
+    # Must be above the 'show' route, because otherwise
+    # params[:id] will be "new".
+    get "tasks/new" => 'tasks#new', :as => 'new_task'
+
+    get "tasks/:id" => 'tasks#show', :as => "task"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
