@@ -5,7 +5,7 @@
 <hr>
 
 <% @task.all.each do |task| %>
-  <p><a href="<%= task_path(task.id) %>"><%= task.description %></a></p>
+  <p><a href="<%= edit_task_path(task.id) %>"><%= task.description %></a></p>
   
   <a href="<%= task_path(task.id) %>" data-method="delete" >
     Delete

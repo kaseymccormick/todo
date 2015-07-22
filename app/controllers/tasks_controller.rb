@@ -57,6 +57,7 @@ class TasksController < ApplicationController
     private
   
     def task_params
+      binding.pry
       params[:task].permit(:description)
     end
   

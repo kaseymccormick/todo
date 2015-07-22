@@ -1,0 +1,8 @@
+<h1>Edit Post</h1>
+
+<!-- <form action="/posts/7" method="put"> -->
+<%= form_tag task_path(@task.id), :method => "put" do %>
+  <input type="text" name="task[description]" placeholder="Description" value="<%= @task.description %>">
+  
+  <input type="submit">
+<% end %>
