@@ -24,14 +24,14 @@ Rails.application.routes.draw do
     #------------------------------------------------
     get "/signin" => 'users#signin', :as => "signin"
     
-    # post "/profile" => 'users#profile', :as =>"profile"
+    post "/profile" => 'users#profile', :as =>"profile"
     
     get "/signup" => 'users#signup', :as => "signup"
      
     get "/signout" => 'users#logout', :as => "signout"
     
     post "/new" => 'users#create', :as => 'new_user'
-    
+    get "users/:id/view"
     
 
     # resources :users
