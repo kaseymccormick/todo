@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   def update
     @user = Post.find(params[:id])
     
-    if @user.update_attributes(post_params)
+    if @user.update_attributes(user_params)
       redirect_to posts_path # Redirection needs a request path.
     else
       # Rendering needs a specific view template to show.
@@ -37,16 +37,16 @@ class UsersController < ApplicationController
   
   # Get the form to create a post.
   def new
-    @user = Post.new
+    @user = User.new
     # Automatically load the view in /views/posts/new.html.erb
   end
   
   # Processes the new-post form submission.
   def create
-    @user = Post.new(post_params)
+    @user = User.new(user_params)
     
     if @user.save
-      redirect_to posts_path # Redirection needs a request path.
+      redirect_to profile_path # Redirection needs a request path.
     else
       # Rendering needs a specific view template to show.
       

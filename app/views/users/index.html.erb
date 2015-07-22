@@ -1,0 +1,17 @@
+<h1>All Tasks</h1>
+
+<a href="<%= new_task_path %>">New Task</a>
+
+<hr>
+
+<% @task.all.each do |task| %>
+  <p><a href="<%= edit_task_path(task.id) %>"><%= task.description %></a></p>
+  
+  <a href="<%= task_path(task.id) %>" data-method="delete" >
+    Delete
+  </a>
+  
+  <!-- Generates something like this: -->
+  <!-- <p><a href="/posts/5">Foo Bar</a></p> -->
+  <hr>
+<% end %>

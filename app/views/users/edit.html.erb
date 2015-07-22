@@ -1,0 +1,10 @@
+<h1>Edit User</h1>
+
+<!-- <form action="/posts/7" method="put"> -->
+<%= form_tag task_path(@user.id), :method => "put" do %>
+  <input type="text" name="user[name]" placeholder="Name" value="<%= @user.name %>">
+  <input type="text" name="user[email]" placeholder="Email" value="<%= @user.email %>">
+  <input type="text" name="user[password]" placeholder="Name" value="<%= @user.password %>">
+  
+  <input type="submit">
+<% end %>

@@ -1,0 +1,10 @@
+<h1>Sign Up</h1>
+
+<!-- <form action="/posts" method="post"> -->
+<%= form_tag new_user_path, :method => "post" do %>
+  <input type="text" name="user[name]" placeholder="name">
+  <input type="text" name="user[email]" placeholder="email">
+  <input type="text" name="user[password]" placeholder="password">
+
+  <input type="submit">
+<% end %>

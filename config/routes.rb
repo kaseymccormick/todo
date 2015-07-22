@@ -19,6 +19,22 @@ Rails.application.routes.draw do
     get "tasks/new" => 'tasks#new', :as => 'new_task'
 
     get "tasks/:id" => 'tasks#show', :as => "task"
+    #------------------------------------------------
+    #  user route paths
+    #------------------------------------------------
+    get "/signin" => 'users#signin', :as => "signin"
+    
+    # post "/profile" => 'users#profile', :as =>"profile"
+    
+    get "/signup" => 'users#signup', :as => "signup"
+     
+    get "/signout" => 'users#logout', :as => "signout"
+    
+    post "/new" => 'users#create', :as => 'new_user'
+    
+    
+
+    # resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
