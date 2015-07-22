@@ -6,7 +6,7 @@
 
 
 
-<% @task.all.each do |task| %>
+<% @task.each do |task| %>
 <div class="task">
   <p><a href="<%= task_path(task.id) %>"><%= task.description %></a></p>
   

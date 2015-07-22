@@ -55,6 +55,10 @@ class UsersController < ApplicationController
     end
   end
   
+  def profile
+    @task = Task.new
+  end
+  
   private
   
   def user_params
