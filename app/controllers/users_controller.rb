@@ -39,6 +39,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     # Automatically load the view in /views/posts/new.html.erb
+     render :action => "new", :layout => "landing"
   end
   
   # Processes the new-post form submission.
@@ -55,6 +56,7 @@ class UsersController < ApplicationController
     end
   end
   
+ 
   def profile
     @task = Task.new
   end

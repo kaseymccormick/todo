@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :days
     # Every route that you name... Rails makes a method
     # which returns that route's path.
     get "/tasks" => 'tasks#index', :as => "tasks"
